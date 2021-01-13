@@ -1,0 +1,29 @@
+{% extends 'blog_project/base_home.html' %}
+
+{% block content %}
+<div class="bg">
+  <nav class="navbar navbar-light custom-navbar">
+    <a class="navbar-brand" href="{% url 'blog_project:about_list' %}">/now</a>
+  </nav>
+  <div class="header">
+    <h1>Muhammad Ravi</h1>
+    <p>I'm a Data Scientist. Writes about data collection,<br>
+      analysis, and visualization. I love art, history, and <br>
+      technology.
+    </p>
+  </div>
+</div>
+
+<h2 class="sub-header">This is a collection of projects I made</h2>
+
+<div class="content-list">
+    {% for post in post_list %}
+          <p class="content-date">{{ post.published_date|date:"M d, Y"}}</p>
+          <h1><a class="content-title" href="{% url 'blog_project:post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+          <p class="content-summary">{{ post.summary }}</p>
+          <a href="{% url 'blog_project:post_detail' pk=post.pk %}">Read more <i class="fa fa-arrow-right"></i></i></a>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

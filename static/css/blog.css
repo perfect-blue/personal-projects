@@ -1,0 +1,63 @@
+.bg{
+  background-image:url('../images/header-background.jpg');
+  background-repeat:no-repeat;
+  background-size:100%;
+  border-bottom:1px solid;
+  border-color: #5C5C61;
+}
+
+.custom-navbar{
+  padding: 2% 10%;
+  font-size:1.6rem;
+  font-family:'Poppins';
+}
+
+.navbar-brand:hover {
+    text-decoration: underline;
+    color: #16161D;
+}
+
+.header{
+  padding: 3% 10%;
+}
+
+
+.header h1{
+  font-family:'Poppins';
+  font-size: 3.5rem;
+}
+
+.header p{
+  font-family: 'Playfair Display';
+  font-size: 1.6rem;
+  padding-top: 3%;
+}
+
+.sub-header{
+  padding: 1% 10%;
+}
+
+.content-list {
+  padding: 2% 10%;
+
+}
+
+.content-date {
+  font-family:'Poppins';
+  color:#5C5C61;
+}
+
+.content-title {
+  font-family: 'Poppins';
+  color: #16161D;
+  text-decoration: none;
+}
+
+.content-summary{
+  padding-right: 40%
+}
+
+.content-title:hover {
+    text-decoration: underline;
+    color: #16161D;
+}
