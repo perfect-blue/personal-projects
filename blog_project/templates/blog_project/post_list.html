@@ -14,16 +14,30 @@
   </div>
 </div>
 
-<h2 class="sub-header">This is a collection of projects I made</h2>
+<div class="row">
 
-<div class="content-list">
-    {% for post in post_list %}
-          <p class="content-date">{{ post.published_date|date:"M d, Y"}}</p>
-          <h1><a class="content-title" href="{% url 'blog_project:post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-          <p class="content-summary">{{ post.summary }}</p>
-          <a href="{% url 'blog_project:post_detail' pk=post.pk %}">Read more <i class="fa fa-arrow-right"></i></i></a>
-    {% endfor %}
+  <div class="col-8 content-list">
+      <h2 class="sub-header">This is a collection of projects I made</h2>
+      <div>
+          {% for post in post_list %}
+                <p class="content-date">{{ post.published_date|date:"M d, Y"}}</p>
+                <h1><a class="content-title" href="{% url 'blog_project:post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                <h2 class="content-subtitle">{{ post.subtitle }}</h2>
+                <p class="content-summary">{{ post.summary }}</p>
+                <a href="{% url 'blog_project:post_detail' pk=post.pk %}">Read more <i class="fa fa-arrow-right"></i></i></a>
+          {% endfor %}
+      </div>
+  </div>
+
+  <div class="col-4 sidebar">
+    <ul>
+      <li><h3>Online Presence</h3></li>
+      <li> <a href="#" class="social-link"> <i class="fa fa-linkedin nav-social" aria-hidden="true"></i> Linkedin</a> </li>
+      <li> <a href="#" class="social-link"> <i class="fa fa-github nav-social" aria-hidden="true"></i> Github</a> </li>
+      <li> <a href="#" class="social-link"> <i class="fa fa-twitter nav-social" aria-hidden="true"></i> Twitter</a> </li>
+      <li> <a href="#" class="social-link"> <i class="fa fa-instagram nav-social" aria-hidden="true"></i> Instragram</a> </li>
+    </ul>
+  </div>
 </div>
-
 
 {% endblock %}

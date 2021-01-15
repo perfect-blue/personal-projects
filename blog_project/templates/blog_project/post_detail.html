@@ -3,19 +3,17 @@
 {% block content %}
 
 
-      <div class="postheading">
-        {% if post.published_date %}
-            <div class="date postdate">
-                {{ post.published_date }}
-            </div>
 
-        {% else %}
-            <a class="btn btn-outline-dark" href="{% url 'blog_project:post_publish' pk=post.pk %}">Publish</a>
-        {% endif %}
-        <h1 class='posttitle loader'>{{ post.title }}</h1>
-      <p class='postcontent' >{{ post.text|safe|linebreaksbr }}</p>
-      </div>
-
+        <div class="detail-header">
+          <h1>{{ post.title }}</h1>
+          <h2>{{ post.subtitle }}</h2>
+          {% if post.published_date %}
+              <p id=detail-date><span>Publised date </span>{{ post.published_date|date:"M d, Y"}}</p>
+          {% else %}
+              <a class="btn btn-outline-dark" href="{% url 'blog_project:post_publish' pk=post.pk %}">Publish</a>
+          {% endif %}
+          <p>{{ post.text|safe|linebreaksbr }}</p>
+        </div>
 
 
 {% endblock %}
