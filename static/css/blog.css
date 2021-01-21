@@ -5,7 +5,6 @@
   background-repeat:no-repeat;
   background-size:30%;
   background-position: 80%;
-
 }
 
 .custom-navbar{
@@ -45,7 +44,7 @@
 
 .content-list {
   padding: 2% 12%;
-
+  margin: auto;
 }
 
 .content-date {
